@@ -7,10 +7,14 @@
 </head>
 <body>
     <h1>確認ページ</h1>
-    <p>{{message|safe}}</p>
-    <form action="{% url 'kakunin' %}" method="post">
+    <p>{{name}}</p>
+    <p>{{mail}}</p>
+    <p>{{age}}</p>
+    <p>{{address}}</p>
+    <p>{{money}}</p>
+    {% comment %} <form action="{% url 'kakunin' %}" method="get">
         {% csrf_token %}
         {{ form.as_table }}
-    </form>
+    </form> {% endcomment %}
 </body>
 </html>

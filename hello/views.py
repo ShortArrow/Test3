@@ -25,4 +25,16 @@ def kariru(request):
     return render(request, 'hello/kariru.html')
 
 def kakunin(request):
-    return render(request, 'hello/kakunin.html')
+    name = request.POST['name']
+    mail = request.POST['mail']
+    age = request.POST['age']
+    address = request.POST['address']
+    money = request.POST['money']
+    params = {
+        'name':name,
+        'mail':mail,
+        'age':age,
+        'address':address,
+        'money':money,
+    }
+    return render(request, 'hello/kakunin.html', params)
