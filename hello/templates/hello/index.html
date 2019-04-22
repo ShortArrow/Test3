@@ -1,3 +1,4 @@
+{% load static%}
 <!doctype html>
 <html lang="ja">
 <head>
@@ -7,13 +8,16 @@
 <body>
     <h1>SPACE BOOKING</h1>
     <p>貸したい人と借りたい人をマッチングするサービスです。</p>
-    <p><a href="{% url 'kariru' %}">kariru</a></p>
-    <p><a href="{% url 'kasu' %}">kasu</a></p>
+    <p><button type="button"onclick="location.href='kariru'">kariru</button></p>
+    <p><button type="button"onclick="location.href='kasu'">kasu</button></p>
+    <div id="main_visual">
+        <img src="{% static "hello\4-02-037_S[1].jpg"%}" alt="">
+    </div>
     <article>
         <p class="lead">SPACE BOOKINGへのお問い合わせは、こちらのフォームをご利用ください。</p>
         <section>
             <h2>お問い合わせフォーム</h2>
-            <form action="mail.php" method="post">
+            <form action="mailto:kskkm0228@gmail.com" method="post">
         <dl class="clearfix">
           <dt><label for="name">お名前</label><strong>（必須）</strong></dt>
           <dd><input type="text" name="name" id="name" required></dd>
