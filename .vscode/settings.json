@@ -1,4 +1,4 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "/miniconda3/envs/dj/bin/python"
+    "python.pythonPath": "C:\\tools\\miniconda3\\envs\\dj\\python.exe"
 }

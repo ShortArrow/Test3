@@ -9,6 +9,37 @@
     <p>貸したい人と借りたい人をマッチングするサービスです。</p>
     <p><a href="{% url 'kariru' %}">kariru</a></p>
     <p><a href="{% url 'kasu' %}">kasu</a></p>
+    <article>
+        <p class="lead">SPACE BOOKINGへのお問い合わせは、こちらのフォームをご利用ください。</p>
+        <section>
+            <h1>お問い合わせフォーム</h1>
+            <form action="mail.php" method="post">
+        <dl class="clearfix">
+          <dt><label for="name">お名前</label><strong>（必須）</strong></dt>
+          <dd><input type="text" name="name" id="name" required></dd>
+          <dt><label for="email">メールアドレス</label><strong>（必須）</strong></dt>
+          <dd><input type="email" name="email" id="email" required></dd>
+          <dt>SPACE BOOKINGを知ったきっかけ</dt>
+          <dd>
+              <label><input type="radio" value="answer1" name="questionnaire">口コミ</label>
+              <label><input type="radio" value="answer2" name="questionnaire">検索エンジン</label>
+              <label><input type="radio" value="answer3" name="questionnaire">その他</label>
+          </dd>
+          <dt><label for="category">お問い合わせ種類</label></dt>
+          <dd>
+              <select name="category" id="category">
+              <option value="category1">貸すことについて</option>
+              <option value="category2">借りることについて</option>
+              <option value="category3">その他のお問い合わせ</option>
+            </select>
+          </dd>
+          <dt><label for="message">お問い合わせ内容</label></dt>
+          <dd><textarea id="message" name="message" cols="40" rows="5" placeholder="お問い合わせ内容をご入力ください。"></textarea></dd>
+        </dl>
+        <p class="button"><input type="submit" value="確認する"></p>
+      </form>
+    </section>
+  </article>
 </body>
 </html>
 
