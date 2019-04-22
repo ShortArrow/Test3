@@ -1,28 +1,31 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-from .forms import HelloForm
+from .forms import homeForm
 
 
 def index(request):
-    return render(request, 'hello/index.html')
+    return render(request, 'home/index.html')
+
 
 def kasu(request):
     params = {
-            'title': 'Hello',
-            'message': 'your data:',
-            'form': HelloForm()
-        }
-    
+        'title': 'home',
+        'message': 'your data:',
+        'form': homeForm()
+    }
+
     if (request.method == 'POST'):
         params['message'] = '名前：' + request.POST['name'] + \
             '<br>メール：' + request.POST['mail'] + \
             '<br>年齢：' + request.POST['age']
-        params['form'] = HelloForm(request.POST)
-    return render(request, 'hello/kasu.html', params)
+        params['form'] = homeForm(request.POST)
+    return render(request, 'home/kasu.html', params)
+
 
 def kariru(request):
-    return render(request, 'hello/kariru.html')
+    return render(request, 'home/kariru.html')
+
 
 def kakunin(request):
     name = request.POST['name']
@@ -32,11 +35,11 @@ def kakunin(request):
     money = request.POST['money']
     monkey = request.POST['monkey']
     params = {
-        'name':name,
-        'mail':mail,
-        'age':age,
-        'address':address,
-        'money':money,
-        'monkey':monkey,
+        'name': name,
+        'mail': mail,
+        'age': age,
+        'address': address,
+        'money': money,
+        'monkey': monkey,
     }
-    return render(request, 'hello/kakunin.html', params)
+    return render(request, 'home/kakunin.html', params)
