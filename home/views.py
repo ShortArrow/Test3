@@ -13,7 +13,6 @@ def kasu(request):
             'message': 'your data:',
             'form': homeForm()
         }
-    
     if (request.method == 'POST'):
         params['message'] = '名前：' + request.POST['name'] + \
             '<br>メール：' + request.POST['mail'] + \
@@ -23,6 +22,7 @@ def kasu(request):
 
 def kariru(request):
     return render(request, 'home/kariru.html')
+
 
 def kakunin(request):
     name = request.POST['name']
