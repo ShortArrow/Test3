@@ -1,7 +1,7 @@
-*{
+.borrow{
     color :red;
 }
 
-.title{
-    color :ff0018ff
+.lend{
+    color :yellow;
 }
