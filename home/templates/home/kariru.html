@@ -11,16 +11,23 @@
     <thead>
             <th>SPACE</th><th>&nbsp;</th>
         </thead>
-
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>mail</th>
+                <th>age</th>
+                <th>address</th>
+                <th>money</th>
+            </tr>
+        </thead>
         <tbody>
-            {% for post in data %}
+            {% for item in data %}
                 <tr>
-                    <!-- Todo Name -->
-                    <td>
-                        <div>{{ post.name }}</div>
-                        <div>{{ post.mail }}</div>
-                        <div>{{ post.age }}</div>
-                    </td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.mail}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.address}}</td>
+                    <td>{{item.money}}</td>
                 </tr>
             {% endfor %}
         </tbody>
