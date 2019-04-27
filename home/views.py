@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 from .forms import homeForm
+from .models import homeModel 
 
 
 def index(request):
@@ -20,9 +21,6 @@ def kasu(request):
         params['form'] = homeForm(request.POST)
     return render(request, 'home/kasu.html', params)
 
-def kariru(request):
-    return render(request, 'home/kariru.html')
-
 
 def kakunin(request):
     name = request.POST['name']
@@ -37,12 +35,13 @@ def kakunin(request):
         'address':address,
         'money':money,
     }
-    return render(request, 'home/kakunin.html', params)
+    return render(request, 'home/kakunin.html')
 
-def create(request):
-    data = homeForm.objects.all()
+def kariru(request):
+    data = homeModel.objects.all() #レコードを表示する
     # form.save(commit=True)
     params = {
         'data': data,
+        'form': homeForm()
     }
-    return render(request, 'home/create.html', params)
+    return render(request, 'home/kariru.html', params)

@@ -10,7 +10,20 @@
     <table>
     <form action="{% url 'kakunin' %}" method="post">
         {% csrf_token %}
-        {{ form.as_table }}
+        <table>
+        <tr>
+            <th>NAME</th>
+            <th>MAIL</th>
+            <th>AGE</th>
+        </tr>
+    {% for item in data %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.mail}}</td>
+            <td>{{item.age}}</td>
+        <tr>
+    {% endfor %}
+    </table>
         <tr><td></td><td><input type="submit" value="click"></td></tr>
     </form>
     </table>

@@ -5,7 +5,26 @@
     <title>借りる人のためのページ</title>
 </head>
 <body>
-    <h1>SPACE BOOKINGでスペースを借りる</h1>
-    <p>This is sample page.</p>
+    <h1>SPACE BOOKINGのスペース一覧</h1>
+    <p>This is sample page</p>
+    <table>
+    <thead>
+            <th>SPACE</th><th>&nbsp;</th>
+        </thead>
+
+        <tbody>
+            {% for post in data %}
+                <tr>
+                    <!-- Todo Name -->
+                    <td>
+                        <div>{{ post.name }}</div>
+                        <div>{{ post.mail }}</div>
+                        <div>{{ post.age }}</div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </table>
 </body>
 </html>

@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import  homeForm
+from .models import  homeModel
 
-admin.site.register(homeForm)
+admin.site.register(homeModel)
