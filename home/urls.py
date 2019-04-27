@@ -6,4 +6,5 @@ urlpatterns = [
     path("kariru", views.kariru, name="kariru"),
     path("kasu", views.kasu, name="kasu"),
     path("kakunin", views.kakunin, name="kakunin"),
+    path("create", views.create, name="create"),
 ]

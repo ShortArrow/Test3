@@ -30,13 +30,19 @@ def kakunin(request):
     age = request.POST['age']
     address = request.POST['address']
     money = request.POST['money']
-    monkey = request.POST['monkey']
     params = {
         'name':name,
         'mail':mail,
         'age':age,
         'address':address,
         'money':money,
-        'monkey':monkey,
     }
     return render(request, 'home/kakunin.html', params)
+
+def create(request):
+    data = homeForm.objects.all()
+    # form.save(commit=True)
+    params = {
+        'data': data,
+    }
+    return render(request, 'home/create.html', params)

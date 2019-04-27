@@ -13,7 +13,11 @@
     <p>{{age}}</p>
     <p>{{address}}</p>
     <p>{{money}}</p>
-    <p>{{monkey}}</p>
+
+    <button type="submit" onclick="location.href='create'">
+            Add
+    </button>
+
     {% comment %} <form action="{% url 'kakunin' %}" method="get">
         {% csrf_token %}
         {{ form.as_table }}

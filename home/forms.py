@@ -6,4 +6,3 @@ class homeForm(forms.Form):
     age = forms.IntegerField(label='age')
     address = forms.CharField(label='address')
     money = forms.IntegerField(label='money')
-    monkey = forms.CharField(label='monkey')
