@@ -9,4 +9,7 @@ local_settings.py
 db.sqlite3
 media
 
+###
+.vscode/settings.json
+
 # If your build process includes running collectstatic, then ...
