@@ -50,3 +50,7 @@ def kariru(request):
         'form': homeForm()
     }
     return render(request, 'home/kariru.html', params)
+
+
+def mailpage(request):
+    return render(request, 'home/mailpage.html')
