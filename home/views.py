@@ -6,7 +6,11 @@ from .models import homeModel
 
 
 def index(request):
-    return render(request, 'home/index.html')
+    params = {
+        'title': "SPACE BOOKING",
+        'message': "貸したい人と借りたい人をマッチングするサービスです。",
+    }
+    return render(request, 'home/index.html', params)
 
 
 def kasu(request):

@@ -4,7 +4,7 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>home</title>
+    <title>{{title}}</title>
     <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
     <!-- BootstrapのCSS読み込み -->
     <link href="{% static "home/node_modules/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -13,14 +13,14 @@
     <!-- BootstrapのJS読み込み -->
     <script src="{% static 'home/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <!-- 独自CSS・JSの読み込み -->
-    <link rel="stylesheet" href="{% static 'home/css/main.css' %}" />
     <script src="{% static 'home/js/main.js' %}"></script>
     <link rel="stylesheet" href="{% static 'home/css/sticky-footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/main.css' %}" />
 </head>
 <body>
     <header>
-        <h1>SPACE BOOKING</h1>
-        <p>貸したい人と借りたい人をマッチングするサービスです。</p>
+        <h1>{{title}}</h1>
+        <p>{{message}}</p>
     </header>
     <main>
         <div class="buttoncase"><button type="button"onclick="location.href='kariru'" class="btn btn-primary btn-block btn-lg">借りる</button></div>
