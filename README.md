@@ -8,7 +8,7 @@ After the pull, Please do these tasks.
 
 #### Conda PackageList Clone
 
-`conda env export > requirements.yaml`
+`conda env create --file requirements.yml`
 
 #### NPM PackageList Clone
 
@@ -21,7 +21,7 @@ Before the commit,Please do these tasks.
 
 #### Conda PackageList Save
 
-`conda env create --file env_name.yml`
+`conda env export > requirements.yaml`
 
 #### NPM PackageList Save
 
