@@ -4,8 +4,15 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>home</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="{% static "node_modules/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="{% static 'node_modules/jquery/dist/jquery.min.js' %}"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- 独自CSS・JSの読み込み -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
