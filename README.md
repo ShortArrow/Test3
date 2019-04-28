@@ -28,3 +28,8 @@ Before the commit,Please do these tasks.
 `npm install xxx`
 
 dont need `--save` option
+
+### 参考
+
+conda environments cloning
+https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment
