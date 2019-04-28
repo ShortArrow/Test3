@@ -4,8 +4,9 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet"  type="text/css" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>home</title>
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
     <h1>SPACE BOOKING</h1>
@@ -13,7 +14,7 @@
     <p><button class="kariru" type="button"onclick="location.href='kariru'">kariru</button></p>
     <p><button class="kasu" type="button"onclick="location.href='kasu'">kasu</button></p>
     <div id="main_visual">
-        <img src="{% static "home\img\4-02-037_S.jpg"%}" alt="">
+        <img src="{% static "img\4-02-037_S.jpg"%}" alt="">
     </div>
     <p><button type="button"onclick="location.href='mailpage'">お問い合わせ</button></p>
 </body>
