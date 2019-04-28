@@ -8,12 +8,25 @@
 <body>
     <h1>確認ページ</h1>
     <h1>以下の内容でお間違いないでしょうか？</h1>
-    <p>{{name}}</p>
-    <p>{{mail}}</p>
-    <p>{{age}}</p>
-    <p>{{address}}</p>
-    <p>{{money}}</p>
-    <p>{{monkey}}</p>
+    <table>
+        <tr>
+            <th>NAME</th>
+            <th>MAIL</th>
+            <th>AGE</th>
+        </tr>
+    {% for item in data %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.mail}}</td>
+            <td>{{item.age}}</td>
+        <tr>
+    {% endfor %}
+    </table>
+
+    <button type="submit" onclick="location.href='create'">
+            Add
+    </button>
+
     {% comment %} <form action="{% url 'kakunin' %}" method="get">
         {% csrf_token %}
         {{ form.as_table }}
