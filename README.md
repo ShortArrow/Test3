@@ -1,6 +1,6 @@
 # Test3
 
-## Conda Virtual Enviroment Cloning
+## Enviroment Cloning
 
 ### After pull
 
