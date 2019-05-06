@@ -11,5 +11,5 @@ media
 
 ###
 .vscode/settings.json
-
+*.studio
 # If your build process includes running collectstatic, then ...
