@@ -4,6 +4,7 @@ from home import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("kariru", views.kariru, name="kariru"),
+    path('kariru/<int:num>', views.kariru, name='kariru'),
     path("kasu", views.kasu, name="kasu"),
     path("kakunin", views.kakunin, name="kakunin"),
     path("mailpage", views.mailpage, name="mailpage"),
