@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 from django.http import HttpResponse
 from .forms import homeForm
 from .models import homeModel
+from django.core.paginator import Paginator
 
 
 def index(request):
@@ -46,12 +47,13 @@ def kakunin(request):
     return render(request, 'home/kakunin.html')
 
 
-def kariru(request):
+def kariru(request, num=1):
     data = homeModel.objects.all()  # レコードを表示する
     # form.save(commit=True)
+    page = Paginator(data, 3)
     params = {
-        'data': data,
-        'form': homeForm()
+        'data': page.get_page(num),
+        'form': homeForm(),
     }
     return render(request, 'home/kariru.html', params)
 
