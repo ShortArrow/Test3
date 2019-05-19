@@ -6,6 +6,9 @@
         "type": "npm",
         "script": "install",
         "path": "home/static/home/",
-        "problemMatcher": []
+        "problemMatcher": [],
+        "runOptions": {
+            "runOn": "folderOpen"
+        }
     }]
 }

@@ -29,6 +29,10 @@ Before the commit,Please do these tasks.
 
 dont need `--save` option
 
+#### output ERD to PDF
+
+`python manage.py graph_models -a -g -o graph-model.pdf`
+
 ### 参考
 
 conda environments cloning
