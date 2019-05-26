@@ -7,11 +7,14 @@
     <title>{{title}}</title>
     <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
     <!-- BootstrapのCSS読み込み -->
-    <link href="{% static "home/node_modules/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+    {% comment %} <link href="{% static "home/node_modules/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet"> {% endcomment %}
+    <link href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <!-- jQuery読み込み -->
-    <script src="{% static 'home/node_modules/jquery/dist/jquery.min.js' %}"></script>
+    {% comment %} <script src="{% static 'home/node_modules/jquery/dist/jquery.min.js' %}"></script> {% endcomment %}
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script> 
     <!-- BootstrapのJS読み込み -->
-    <script src="{% static 'home/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    {% comment %} <script src="{% static 'home/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="https://unpkg.com/bootstrap/dist/js/bootstrap.min.js' %}"></script> {% endcomment %}
     <!-- 独自CSS・JSの読み込み -->
     <script src="{% static 'home/js/main.js' %}"></script>
     <link rel="stylesheet" href="{% static 'home/css/sticky-footer.css' %}" />
