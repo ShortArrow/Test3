@@ -1,5 +1,5 @@
 from django.urls import path
-from home import views
+from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -8,4 +8,7 @@ urlpatterns = [
     path("kasu", views.kasu, name="kasu"),
     path("kakunin", views.kakunin, name="kakunin"),
     path("mailpage", views.mailpage, name="mailpage"),
+    path("edit/<int:num>", views.edit, name='edit'),
+    path("delete/<int:num>", views.delete, name='delete'),
+    path("find", views.find, name='find'),
 ]
