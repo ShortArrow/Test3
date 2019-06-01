@@ -1,5 +1,5 @@
 ﻿from django import forms
-from.models import homeModel
+from .models import homeModel
 
 class homeForm(forms.ModelForm):
     class Meta:
