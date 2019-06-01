@@ -26,7 +26,7 @@
     <button type="submit" onclick="location.href='create'">
             Add
     </button>
-
+    <a href="{% url 'index' %}">トップページに戻る</a>
     {% comment %} <form action="{% url 'kakunin' %}" method="get">
         {% csrf_token %}
         {{ form.as_table }}
