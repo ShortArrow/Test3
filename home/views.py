@@ -5,6 +5,8 @@ from .forms import homeForm
 from .forms import kensakuForm
 from .models import homeModel
 from django.core.paginator import Paginator
+from .forms import MessageForm
+from .models import Message
 
 
 def index(request):
@@ -105,3 +107,16 @@ def find(request):
         'data':data,
     }
     return render(request, 'home/find.html', params)
+
+def message(request, page=1):
+    if (request.method == 'POST'):
+        obj = Message()
+        form = MessageForm(request.POST, instance=obj)
+        form.save()
+    data = Message.objects.all().reverse()
+    paginator = Paginator(data, 5)
+    params = {
+        'form': MessageForm(),
+        'data': paginator.get_page(page)
+    }
+    return render(request, 'home/message.html', params)

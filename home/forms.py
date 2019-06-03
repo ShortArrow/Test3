@@ -1,5 +1,5 @@
 ﻿from django import forms
-from .models import homeModel
+from .models import homeModel, Message
 
 class homeForm(forms.ModelForm):
     class Meta:
@@ -9,3 +9,7 @@ class homeForm(forms.ModelForm):
 class kensakuForm(forms.Form):  #本文のFindForm
     find = forms.CharField(label='address', required=False)
 
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = ['title', 'content', 'home']
